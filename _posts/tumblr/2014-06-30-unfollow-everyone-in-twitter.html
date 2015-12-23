@@ -1,0 +1,24 @@
+---
+layout: post
+title: unfollow everyone in twitter
+date: '2014-06-30T18:19:00+02:00'
+tags: []
+tumblr_url: http://deepredsky.tumblr.com/post/90348014634/unfollow-everyone-in-twitter
+---
+<p>here is a little javascript to paste in the console to unfollow those who you are following</p>
+
+<p>1. Visit <a href="http://twitter.com/following">http://twitter.com/following</a> and scroll down till all the users you are following are loaded</p>
+<p>2. Open console ( right click -&gt; inspect element -&gt; console )</p>
+<p>3. Pase following code</p>
+
+<pre><code>[].slice.call(document.querySelectorAll(' .unfollow-text')).forEach(function(button) {
+button.click();
+    
+});
+</code>
+</pre>
+<p></p>
+<p><span>done!</span></p>
+
+<p><span>if you are wondering why you&rsquo;d ever do this - at times you might be scammed into following thousand of ppl you don&rsquo;t even know. :)</span></p>
+<p>gist here : <a href="https://gist.github.com/JamieMason/7580315">https://gist.github.com/JamieMason/7580315</a></p>

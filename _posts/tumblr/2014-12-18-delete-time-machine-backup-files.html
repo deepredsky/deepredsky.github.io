@@ -1,0 +1,18 @@
+---
+layout: post
+title: Delete time machine backup files
+date: '2014-12-18T13:34:37+01:00'
+tags: []
+tumblr_url: http://deepredsky.tumblr.com/post/105509855249/delete-time-machine-backup-files
+---
+<p>TimeMachin does not allow to delete individual files from another machine&rsquo;s backup using regular commands. However, old backups can be deleted using &ldquo;tmutil&rdquo; command</p>
+<p>e.g</p>
+<pre><code>sudo tmutil "/Volumes/Time Machine Backups/Backups.backupdb/computer_name/backup_date"</code></pre>
+<p>This will delete all files in the backup for that particular backup. </p>
+<p>However, to delete files inside of a backup is not possible using this method since backups are protected at kernel level. To bypass this protected, apple provides a utility called &ldquo;bypass&rdquo; :) - any command passed to this utility will bypass the protection.</p>
+<p>on Yosemite</p>
+<pre><code>sudo /System/Library/Extensions/TMSafetyNet.kext/Contents/Helpers/bypass rm -rf "/Volumes/Time Machine Backups/Backups.backupdb/computer_name/backup_date/Macintosh HD/Users/me/Desktop/somefile.jpg"</code></pre>
+<p>on Mountain Lion, it exists in</p>
+<pre><code>/System/Library/Extensions/TMSafetyNet.kext/Helpers/bypass</code></pre>
+<p>on Lion,</p>
+<pre><code>/System/Library/Extensions/TMSafetyNet.kext/Contents/MacOS/bypass</code></pre>
