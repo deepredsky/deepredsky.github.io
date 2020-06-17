@@ -2,6 +2,7 @@
 layout: page
 title: About Me
 permalink: /about/
+tags: about
 ---
 
 I'm a software developer who specialises in web application development using Ruby on Rails.
