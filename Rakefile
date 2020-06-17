@@ -24,8 +24,7 @@ task :post, :title do |t, args|
     EOS
   end
 
-# Uncomment the line below if you want the post to automatically open in your default text editor
-#  system ("#{ENV['EDITOR']} #{filename}")
+  system ("#{ENV['EDITOR']} #{filename}")
 end
 
 # usage: rake draft['my new draft']
